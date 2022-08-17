@@ -4,7 +4,7 @@
 
 # isomorphic-git
 
-`isomorphic-git` is a pure JavaScript reimplementation of git that works in both Node.js and browser JavaScript environments. It can read and write to git repositories, fetch from and push to git remotes (such as GitHub), all without any native C++ module dependencies.
+`isomorphic-git` is a pure JavaScript reimplementation of git that works in both Node.js and browser JavaScript environments. It can read and write to git repositories, and fetch from and push to git remotes (such as GitHub), all without any native C++ module dependencies.
 
 ## Goals
 
@@ -67,7 +67,7 @@ git.clone({ fs, http, dir, url: 'https://github.com/isomorphic-git/lightning-fs'
 ```
 
 If you're using `isomorphic-git` in the browser, you'll need something that emulates the `fs` API.
-The easiest to setup and most performant library is [LightningFS](https://github.com/isomorphic-git/lightning-fs) which is written and maintained by the same author and is part of the `isomorphic-git` suite.
+The easiest to set up and the most performant library is [LightningFS](https://github.com/isomorphic-git/lightning-fs) which is written and maintained by the same author and is part of the `isomorphic-git` suite.
 If LightningFS doesn't meet your requirements, isomorphic-git should also work with [BrowserFS](https://github.com/jvilk/BrowserFS) and [Filer](https://github.com/filerjs/filer).
 Instead of `isomorphic-git/http/node` this time import `isomorphic-git/http/web`:
 
@@ -83,7 +83,7 @@ git.clone({ fs, http, dir, url: 'https://github.com/isomorphic-git/lightning-fs'
 </script>
 ```
 
-If you're using ES module syntax, you can use either the default import for convenience, or named imports to benefit from tree-shaking if you are using a bundler:
+If you're using ES module syntax, you can use either the default import for convenience or named imports to benefit from tree-shaking if you are using a bundler:
 
 ```js
 import git from 'isomorphic-git'
@@ -101,7 +101,7 @@ Then check out the [Useful Snippets](https://isomorphic-git.org/docs/en/snippets
 
 Unfortunately, due to the same-origin policy by default `isomorphic-git` can only clone from the same origin as the webpage it is running on. This is terribly inconvenient, as it means for all practical purposes cloning and pushing repos must be done through a proxy.
 
-For this purpose [@isomorphic-git/cors-proxy](https://github.com/isomorphic-git/cors-proxy) exists which you can clone or [`npm install`](https://www.npmjs.com/package/@isomorphic-git/cors-proxy).
+For this purpose, [@isomorphic-git/cors-proxy](https://github.com/isomorphic-git/cors-proxy) exists which you can clone or [`npm install`](https://www.npmjs.com/package/@isomorphic-git/cors-proxy).
 For testing or small projects, you can also use [https://cors.isomorphic-git.org](https://cors.isomorphic-git.org) - a free proxy sponsored by [Clever Cloud](https://www.clever-cloud.com/?utm_source=ref&utm_medium=link&utm_campaign=isomorphic-git).
 
 I'm hoping to get CORS headers added to all the major Git hosting platforms eventually, and will list my progress here:
@@ -219,7 +219,7 @@ We are also [@IsomorphicGit](https://twitter.com/IsomorphicGit) on Twitter.
 
 The development setup is similar to that of a large web application.
 The main difference is the ridiculous amount of hacks involved in the tests.
-We use Facebook's [Jest](https://jestjs.io) for testing, which make doing TDD fast and fun,
+We use Facebook's [Jest](https://jestjs.io) for testing, which makes doing TDD fast and fun,
 but we also used custom hacks so that the same
 tests will also run in the browser using [Jasmine](https://jasmine.github.io/) via [Karma](https://karma-runner.github.io).
 We even have our own [mock server](https://github.com/isomorphic-git/git-http-mock-server) for serving
@@ -265,7 +265,7 @@ Cross-browser device testing is provided by:
 
 ## Contributors
 
-Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+Thanks go to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
